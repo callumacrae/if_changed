@@ -1,10 +1,16 @@
+$ cat test.sh
 #!/usr/bin/env bash
 # github.com/callumacrae/if_changed - please send pull requests!
+
+PWD=$(pwd)
 
 changed_files=$(git diff-tree -r --name-only ORIG_HEAD HEAD)
 
 function if_changed() {
-  [[ "$changed_files" == *"$1"* ]] && eval "$2"
+  files=$(printf "%s" "$changed_files" | grep "$1$" -)
+  for file in $files; do
+    cd $(dirname $file) && eval "$2" && cd $PWD
+  done
 }
 
 # JavaScript
