@@ -1,0 +1,9 @@
+language: bash
+
+before_script:
+  - git clone https://github.com/callumacrae/if_changed.git
+  - cd if_changed
+  - git merge origin/test
+
+script:
+  - bash test.sh
