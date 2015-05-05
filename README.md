@@ -1,7 +1,7 @@
 # if_changed
 
 Runs commands when files are changed on git pull: for example, when package.json
-is failed, `npm install` will be ran, installing the updates.
+is failed, `npm install` will be ran, installing the dependency updates.
 
 See [the source] for a full list—it's pretty readable. Please send a pull
 request if your technology or desired command is missing!
