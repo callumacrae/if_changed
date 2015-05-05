@@ -1,4 +1,4 @@
-# if_changed
+# if_changed [![Build Status](https://travis-ci.org/callumacrae/if_changed.svg?branch=master)](https://travis-ci.org/callumacrae/if_changed)
 
 Runs commands when files are changed on git pull: for example, when package.json
 is failed, `npm install` will be ran, installing the dependency updates.
