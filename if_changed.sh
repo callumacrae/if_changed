@@ -4,12 +4,11 @@
 changed_files=$(git diff-tree -r --name-only ORIG_HEAD HEAD)
 
 function if_changed() {
-  files=$(printf "%s" "$changed_files" | grep "$1$" -)
-  for file in $files; do
-    (
-      cd "$(dirname "$file")"
-      eval "$2"
-    )
+  echo "$changed_files" | grep "$1$" |
+  while IFS='' read -r file
+  do
+    # Run command from directory of changed file
+    ( cd "$(dirname "$file")" && eval "$2" )
   done
 }
 
