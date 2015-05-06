@@ -17,6 +17,7 @@ if_changed bower.json "bower install"
 if_changed package.json "npm install"
 
 # PHP
+if_changed composer.lock "composer install"
 if_changed composer.json "composer install"
 
 # Ruby
