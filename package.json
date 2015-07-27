@@ -1,0 +1,25 @@
+{
+  "name": "if_changed",
+  "version": "1.0.0",
+  "description": "Runs installers on file changes",
+  "bin": {
+    "if_changed": "install.sh"
+  },
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/callumacrae/if_changed.git"
+  },
+  "keywords": [
+    "npm",
+    "bower",
+    "composer",
+    "rails"
+  ],
+  "author": "Callum Macrae <callum@macr.ae>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/callumacrae/if_changed/issues"
+  },
+  "homepage": "https://github.com/callumacrae/if_changed"
+}

@@ -8,12 +8,35 @@ request if your technology or desired command is missing!
 
 ## Setup
 
-You can either run this command manually every time you pull, or you can set it
+You can either run this script manually every time you pull, or you can set it
 up on the post-merge git hook so that it runs automatically.
 
-Move the if_changed.sh file to `.git/hooks/post-merge` in your repository
-(where post-merge is the name of the file, not a containing directory), and
-make it executable using `chmod +x post-merge`.
+As of 1.0.0, you can install this over npm.
+
+```
+$ npm install -g if_changed
+```
+
+Then to run the script:
+
+```
+$ if_changed
+```
+
+And to install itself into the post-merge hook:
+
+```
+$ if_changed install
+```
+
+### Manual install
+
+To run every time, download if_changed.sh and run it.
+
+To run automatically on the post-merge hook, move the if_changed.sh file to
+`.git/hooks/post-merge` in your repository (where post-merge is the name of
+the file, not a containing directory), and make it executable using
+`chmod +x post-merge`.
 
 See [this document][git hooks] to learn more about git hooks.
 
